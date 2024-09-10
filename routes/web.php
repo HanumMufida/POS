@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', [HomeController::class, 'home']);
-   
+Route::get('/category/babykid', [ProductsController::class, 'babykid']);
+Route::get('/category/beauty-health', [ProductsController::class, 'beautyhealthy']);
+Route::get('/category/food-beverage ', [ProductsController::class, 'foodbeverage']);
+Route::get('/category/home-care ', [ProductsController::class, 'homecare']);  
+Route::get('/user/{id}/nama/{nama} ', [UserController::class, 'user']); 
 
     
